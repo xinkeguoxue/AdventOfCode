@@ -33,7 +33,6 @@ def isSubstringOf(string):
         if string.find(i) > -1:
             indices.update({i: string.find(i)})
     a = min(indices, key=indices.get)
-    #print(Dict[a])
     return Dict[a]
 
 numbersBack = ['orez', 'eno', 'owt', 'eerht', 'ruof', 'evif', 'xis', 'neves', 'thgie', 'enin']
@@ -71,8 +70,6 @@ def isBackSubstringOf(string):
 
 l = []
 for line in input:
-    #print(isSubstringOf(line))
-    #print(isBackSubstringOf(line[::-1]))
     l.append(isSubstringOf(line)*10 + isBackSubstringOf(line[::-1]))
 print(sum(l))
 
